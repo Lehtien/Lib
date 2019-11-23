@@ -1,24 +1,21 @@
 <template>
   <div id="whole">
-    <!-- <div id="loading">
-      <Loading/>
+    <div id="loading">
+      <Loading />
     </div>
     <div id="contents" class="waiting">
-      <Top/>
-      <Members/>
-      <SS/>
-    </div>-->
-    <Top/>
-    <Members/>
-    <SS/>
-    <transition name="toppage">
-      <a v-scroll-to="'#whole'" class="scroll-top" v-show="isTopBtn">↑ Top</a>
-    </transition>
-    <div class="arrow" v-show="showArrow"></div>
-    <article id="rights">abcdefghijk</article>
-    <Fluid/>
-    <Sandstorm/>
-    <ThreeD/>
+      <Top />
+      <Members />
+      <SS />
+      <transition name="toppage">
+        <a v-scroll-to="'#whole'" class="scroll-top" v-show="isTopBtn">↑ Top</a>
+      </transition>
+      <div class="arrow" v-show="showArrow"></div>
+      <article id="rights">abcdefghijk</article>
+      <Fluid />
+      <Sandstorm />
+      <ThreeD />
+    </div>
   </div>
 </template>
 
@@ -99,9 +96,7 @@ pointer.appendChild(stalker2);
 let i = 0;
 document.addEventListener("mousemove", e => {
   i++;
-  cursor.style.transform = `translate(${e.clientX}px,${
-    e.clientY
-  }px) rotate(45deg)`;
+  cursor.style.transform = `translate(${e.clientX}px,${e.clientY}px) rotate(45deg)`;
   stalker.style.transform = `translate(${e.clientX}px,${
     e.clientY
   }px) rotate3d(-1, -1, 0, ${30 + i}deg) perspective(100px)`;
@@ -113,12 +108,12 @@ document.addEventListener("mousemove", e => {
   cursorY = e.clientY;
 });
 
-document.addEventListener("mouseleave", e => {
+document.addEventListener("mouseleave", () => {
   cursor.style.opacity = "0";
   stalker.style.opacity = "0";
   stalker2.style.opacity = "0";
 });
-document.addEventListener("mouseenter", e => {
+document.addEventListener("mouseenter", () => {
   cursor.style.opacity = "1";
   stalker.style.opacity = "1";
   stalker2.style.opacity = "1";

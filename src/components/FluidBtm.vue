@@ -46,10 +46,10 @@
 </template>
 
 <style lang="scss" scoped>
-.wave {
-  position: relative;
-  bottom: 0;
-  left: 0;
-}
+// .wave {
+//   position: relative;
+//   bottom: 0;
+//   left: 0;
+// }
 </style>
 

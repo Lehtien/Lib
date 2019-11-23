@@ -9,7 +9,6 @@
 </template>
 
 <script>
-//import HelloWorld from "./HelloWorld";
 import Character from "./Character";
 import Modal from "./Modal";
 
@@ -30,7 +29,7 @@ export default {
     isShow() {
       this.showContent = false;
     },
-    visibilityChanged(isVisible, entry) {
+    visibilityChanged(isVisible, entry) { // eslint-disable-line
       this.flg = isVisible;
     }
   }

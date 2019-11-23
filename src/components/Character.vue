@@ -29,7 +29,7 @@ export default {
     };
   },
   methods: {
-    visibilityChanged(isVisible, entry) {
+    visibilityChanged(isVisible, entry) { // eslint-disable-line
       this.isVisible = isVisible;
       if (!this.isVisible) {
         //this.isVisible = isVisible;
@@ -62,7 +62,7 @@ export default {
       if (transition != null) {
         //console.log(transition);
         self.finished = false;
-        transition.addEventListener("transitionend", function fin(e) {
+        transition.addEventListener("transitionend", function fin() {
           //console.log("Transition ended");
           //e.stopPropagation();
           //this.finished = false;
@@ -88,7 +88,7 @@ export default {
       //ctx.fillRect(20,40,50,100);
       // drawing code here
     } else {
-      console.log("no");
+      console.log("no"); // eslint-disable-line
     }
     // if (canvas.getContext){
     //   var ctx = canvas.getContext('2d');

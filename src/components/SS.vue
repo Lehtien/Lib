@@ -63,7 +63,7 @@ export default {
     isShow() {
       this.showContent = false;
     },
-    visibilityChanged(isVisible, entry) {
+    visibilityChanged(isVisible, entry) { // eslint-disable-line
       this.isVisible = isVisible;
     },
     openModal(event) {
